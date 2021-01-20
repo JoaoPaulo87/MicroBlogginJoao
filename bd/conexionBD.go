@@ -19,6 +19,7 @@ func ConectarBD() *mongo.Client {
 		log.Fatal(err.Error())
 		return client
 	}
+	// Con esto checkeamos si hay coneccion con la base de datos.
 	err = client.Ping(context.TODO(), nil)
 	if err != nil {
 		log.Fatal(err.Error())
