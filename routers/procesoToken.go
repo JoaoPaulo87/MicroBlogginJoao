@@ -26,7 +26,7 @@ func ProcesoToken(tk string) (*models.Claim, bool, string, error) {
 	// creo una variable claims de tipo claim del models, se indica como puntero
 	// porque la estructura en donde vuelca el token debe ser un puntero
 	claims := &models.Claim{}
-	// El token que viene en el Header comienza con la palabra Bearer, es un estandar, no es parte del token en sí
+	// El token que viene en el Header comienza con la palabra Bearer, es un estándar, no es parte del token en sí
 	splitToken := strings.Split(tk, "Bearer") // aquí separo la palabra Bearer del resto
 	if len(splitToken) != 2 {
 		// tiene que devolver dos elementos
@@ -35,7 +35,7 @@ func ProcesoToken(tk string) (*models.Claim, bool, string, error) {
 	}
 	tk = strings.TrimSpace(splitToken[1])
 	tkn, err := jwt.ParseWithClaims(tk, claims, func(token *jwt.Token) (interface{}, error) {
-		// el tercer parámetro es una función anónima que recibe un token y resuleve todo ahí validando el token
+		// el tercer parámetro es una función anónima que recibe un token y resuelve todo ahí validando el token
 		return miClave, nil
 	})
 	if err == nil { // el token fue válido, hay que ver si el mail que viene en el token es válido
