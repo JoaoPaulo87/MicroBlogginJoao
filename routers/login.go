@@ -16,7 +16,7 @@ como los otros endPoints, son prácticamente métodos*/
 func Login(w http.ResponseWriter, r *http.Request) {
 	// Vamos a setear en el header que el contenido que devolveremos (w)
 	// será de tipo Json
-	w.Header().Add("content-type", "application/json")
+	w.Header().Add("Content-Type", "application/json")
 
 	var usu models.Usuario
 
