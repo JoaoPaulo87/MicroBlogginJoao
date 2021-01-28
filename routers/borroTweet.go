@@ -11,14 +11,14 @@ import (
 func BorroTweet(w http.ResponseWriter, r *http.Request) {
 	// Aca obtengo el id del tweet que tengo como parametro en el request del postman
 	tweetID := r.URL.Query().Get("tweetID")
-	usertID := r.URL.Query().Get("userID")
 
 	if len(tweetID) < 1 {
 		http.Error(w, "Debe enviar el parámetro ID", http.StatusBadRequest)
 		return
 	}
 
-	respuesta, borrado := bd.BorrarTweet(tweetID, usertID)
+	// IDUsuario es una variable global que esta en procesoToken.go para asi no tener que definir siempre lo mismo
+	respuesta, borrado := bd.BorrarTweet(tweetID, IDUsuario)
 
 	if borrado == false {
 		http.Error(w, "error al borrar el Tweet", http.StatusBadRequest)
