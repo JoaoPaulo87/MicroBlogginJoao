@@ -28,7 +28,7 @@ func ChequeoYaExisteUsuario(email string) (models.Usuario, bool, string) {
 	//FindOne me devuelve un sólo registro que cumple con la condición
 	err := col.FindOne(ctx, condicion).Decode(&resultado)
 
-	//Retornamos el hexagesimal a string con Hex
+	//Convertimos el ID en hexagesimal a string con la función Hex
 	ID := resultado.ID.Hex()
 
 	if err != nil {
