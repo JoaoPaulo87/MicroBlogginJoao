@@ -30,7 +30,7 @@ func ObtenerAvatar(w http.ResponseWriter, r *http.Request) {
 	/*Dato importante:
 	La version gratis de heroku guarda las imagenes por 30 min. y luego
 	las borra, por si queremos abrir el archivo una vez que lo abrimos y nos da error o vacio.*/
-	OpenFile, err := os.Open("uploads/avatars" + perfil.Avatar)
+	OpenFile, err := os.Open("uploads/avatars/" + perfil.Avatar)
 	if err != nil {
 		http.Error(w, "Imagen no encontrada", http.StatusBadRequest)
 		return

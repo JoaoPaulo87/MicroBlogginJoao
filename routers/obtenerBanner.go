@@ -8,11 +8,11 @@ import (
 	"github.com/JoaoPaulo87/microblogginjoao/bd"
 )
 
-/*ObtenerAvatar envía el avatar al http */
+/*ObtenerBanner envía el avatar al http */
 func ObtenerBanner(w http.ResponseWriter, r *http.Request) {
 
 	/*De la URL vamos a obtener nuestro parámetro id del usuario
-	  de quien obtenemos el avatar*/
+	  de quien obtenemos el banner*/
 	ID := r.URL.Query().Get("id")
 	if len(ID) < 1 {
 		http.Error(w, "Debe enviar el parámetro ID", http.StatusBadRequest)
@@ -27,7 +27,7 @@ func ObtenerBanner(w http.ResponseWriter, r *http.Request) {
 	}
 
 	/*Intento abrir el archivo*/
-	OpenFile, err := os.Open("uploads/avatars" + perfil.Avatar)
+	OpenFile, err := os.Open("uploads/banners/" + perfil.Banner)
 	if err != nil {
 		http.Error(w, "Imagen no encontrada", http.StatusBadRequest)
 		return
