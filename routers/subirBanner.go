@@ -6,8 +6,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/JoaoPaulo87/microblogginjoao/bd"
-	"github.com/JoaoPaulo87/microblogginjoao/models"
+	"github.com/JoaoPaulo87/microblog-server/bd"
+	"github.com/JoaoPaulo87/microblog-server/models"
 )
 
 /*SubirBanner sube el Banner al servidor */

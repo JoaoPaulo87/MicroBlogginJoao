@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/JoaoPaulo87/microblogginjoao/bd"
+	"github.com/JoaoPaulo87/microblog-server/bd"
 )
 
 /*LeoTweets - lee los tweets*/

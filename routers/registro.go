@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/JoaoPaulo87/microblogginjoao/bd"
-	"github.com/JoaoPaulo87/microblogginjoao/models"
+	"github.com/JoaoPaulo87/microblog-server/bd"
+	"github.com/JoaoPaulo87/microblog-server/models"
 )
 
 /*Registro es la función para crear en la BD el registro de usuario*/

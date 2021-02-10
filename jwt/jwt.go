@@ -3,7 +3,7 @@ package jwt
 import (
 	"time"
 
-	"github.com/JoaoPaulo87/microblogginjoao/models"
+	"github.com/JoaoPaulo87/microblog-server/models"
 	jwt "github.com/dgrijalva/jwt-go" //Creo un alias para manejarlo más fácil
 )
 

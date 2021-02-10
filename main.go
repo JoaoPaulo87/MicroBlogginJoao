@@ -3,8 +3,8 @@ package main
 import (
 	"log"
 
-	"github.com/JoaoPaulo87/microblogginjoao/bd"
-	"github.com/JoaoPaulo87/microblogginjoao/handlers"
+	"github.com/JoaoPaulo87/microblog-server/bd"
+	"github.com/JoaoPaulo87/microblog-server/handlers"
 )
 
 func main() {

@@ -1,4 +1,4 @@
-module github.com/JoaoPaulo87/microblogginjoao
+module github.com/JoaoPaulo87/microblog-server
 
 go 1.13
 

@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/JoaoPaulo87/microblogginjoao/bd"
+	"github.com/JoaoPaulo87/microblog-server/bd"
 )
 
 /*BorroTweet - Borra un tweet*/

@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/JoaoPaulo87/microblogginjoao/bd"
+	"github.com/JoaoPaulo87/microblog-server/bd"
 )
 
 /*ObtenerAvatar envía el avatar al http */

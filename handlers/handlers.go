@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/JoaoPaulo87/microblogginjoao/middlew"
-	"github.com/JoaoPaulo87/microblogginjoao/routers"
+	"github.com/JoaoPaulo87/microblog-server/middlew"
+	"github.com/JoaoPaulo87/microblog-server/routers"
 	"github.com/gorilla/mux"
 	"github.com/rs/cors"
 )
@@ -30,6 +30,8 @@ func Manejadores() {
 	router.HandleFunc("/altaRelacion", middlew.ChequeoBD(middlew.ValidoJWT(routers.AltaRelacion))).Methods("POST")
 	router.HandleFunc("/bajaRelacion", middlew.ChequeoBD(middlew.ValidoJWT(routers.BajaRelacion))).Methods("DELETE")
 	router.HandleFunc("/consultaRelacion", middlew.ChequeoBD(middlew.ValidoJWT(routers.ConsultaRelacion))).Methods("GET")
+	router.HandleFunc("/listaUsuarios", middlew.ChequeoBD(middlew.ValidoJWT(routers.ListaUsuarios))).Methods("GET")
+	router.HandleFunc("/leoTweetsSeguidores", middlew.ChequeoBD(middlew.ValidoJWT(routers.LeoTweetsSeguidores))).Methods("GET")
 
 	PORT := os.Getenv("PORT")
 
